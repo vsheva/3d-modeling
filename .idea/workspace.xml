@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="34995cb4-48b6-45d3-8451-ddc7931abf10" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../TodoList1/.idea/Todo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TodoList1/.idea/TodoList1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TodoList1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../booksExercise/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../booksExercise/.idea/booksExercise.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../booksExercise/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../booksExercise/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../booksExercise/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../booksExercise/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../class/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../class/.idea/class.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../class/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../class/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../class/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/finalProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/firstModule.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/secondModule.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/.idea/materials.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/css/index.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/fonts/montserrat-v18-latin_cyrillic-300.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/fonts/montserrat-v18-latin_cyrillic-300.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/fonts/montserrat-v18-latin_cyrillic-700.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/fonts/montserrat-v18-latin_cyrillic-700.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/fonts/montserrat-v18-latin_cyrillic-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/fonts/montserrat-v18-latin_cyrillic-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/materials2/image/adv.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/materials2/image/open_book.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/materials2/image/you-dont-know-js.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/materials2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/materials2/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/scss/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/scss/templates/_custom.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/scss/templates/_interface.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/scss/templates/_main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/scss/templates/_normalize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../materials_example_/scss/utils/_fonts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webpack_example_" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webpackage/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webpackage/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webpackage/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webpackage/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webpackage/.idea/webpack.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webpackage/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webpackage/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webpackage/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webpackage/src/modules/firstModule.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webpackage/src/modules/secondModule.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="20mvE3x2dUunL89gopGUSzlUiE2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="34995cb4-48b6-45d3-8451-ddc7931abf10" name="Default Changelist" comment="" />
+      <created>1636662462247</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636662462247</updated>
+      <workItem from="1636662463601" duration="2463000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

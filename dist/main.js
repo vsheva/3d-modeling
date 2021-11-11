@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("I'm the first module!"),console.log("I'm second module1 !")})();
