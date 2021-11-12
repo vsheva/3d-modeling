@@ -40,4 +40,6 @@ const timer = (deadline) => {
     // setInterval(countTimer, 1000)
 }
 
+export default timer;
+
 
