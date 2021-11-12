@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("I'm the first module!"),console.log("I'm second module1 !")})();
+(()=>{"use strict";(function(){document.getElementById("timer-hours"),document.getElementById("timer-minutes"),document.getElementById("timer-seconds");let e=(new Date("31 december 2021").getTime()-(new Date).getTime())/1e3,t=Math.floor(e/60/60),o=Math.floor(e/60%60),n=Math.floor(e%60);console.log(t,o,n),console.log(e)})(),console.log("I'm second module1 !")})();

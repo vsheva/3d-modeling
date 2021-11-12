@@ -1,7 +1,7 @@
 
-import one from './modules/firstModule';
-import two from './modules/secondModule';
+import timer from './modules/timer';
+//import two from './modules/secondModule';
 //const two = require('./modules/secondModule');
 
-one();
-two();
+timer("20 november");
+//two();
