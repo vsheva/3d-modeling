@@ -1,3 +1,5 @@
+"use strict"
+
 const timer = (deadline) => {
     console.log(deadline);
     const timerHours = document.getElementById("timer-hours");
@@ -23,13 +25,13 @@ const timer = (deadline) => {
     const updateClock = () => {
         let getTime = getTimeRemaining()
         console.log(getTime)
-            timerHours.textContent = getTime.hours;
-            timerMinutes.textContent = getTime.minutes;
-            timerSeconds.textContent = getTime.seconds;
+        timerHours.textContent = getTime.hours;
+        timerMinutes.textContent = getTime.minutes;
+        timerSeconds.textContent = getTime.seconds;
 
-            if (gerTime.timeRemaining >0) {
-                setTimeout(updateClock,1000)
-            }
+        if (getTime.timeRemaining >0) {
+            setTimeout(updateClock,1000)
+        }
 
 
     }
@@ -39,6 +41,4 @@ const timer = (deadline) => {
     // setInterval(countTimer, 1000)
 }
 
-
-export default timer;
 
