@@ -1,7 +1,9 @@
 "use strict"
 import timer from './modules/timer';
-//import two from './modules/secondModule';
+import menu from './modules/menu';
+import modal from './modules/modal';
 
 
 timer("20 november 2021");
-//two();
+menu();
+modal();

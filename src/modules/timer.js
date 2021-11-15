@@ -44,11 +44,9 @@ const timer = (deadline) => {
             timerSeconds.textContent = "00";
         }
 
-
         // if (getTime.timeRemaining < 0) {
         //     setTimeout(updateClock,1000)
         // }
-
     }
 
     let intervalId = setInterval(updateClock, 1000)
