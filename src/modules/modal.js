@@ -16,7 +16,7 @@ const modal = () => {
             popupContent.style.top = count * 2 + "px"
         } else {
             cancelAnimationFrame(idAnimation)
-            //count = 0;
+            count = 0;
         }
     }
 
