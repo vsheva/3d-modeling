@@ -24,7 +24,7 @@ const modal = () => {
     popUpBtn.forEach(elem => {                                            // супер!!! потренироваться писать такой код
         elem.addEventListener('click', () => {
             if (screen.width >= 768) {
-                requestAnimationFrame(popupAnimation)
+                idAnimation = requestAnimationFrame(popupAnimation)
             }
             popup.style.display = 'block'
         })
