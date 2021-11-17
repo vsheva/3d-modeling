@@ -40,7 +40,7 @@ const validate = () => {
 
 
     let validFormEmail = () => {
-        let formEmail = document.querySelectorAll('[placeholder="E-mail"]');
+        let formEmail = document.querySelectorAll('.form-email');
         formEmail.forEach(element => {
             element.addEventListener("input", (e) => {
                 e.target.value = e.target.value.replace(/[^a-z\@\_\.\!\~\*\'\-]/gi, '');
