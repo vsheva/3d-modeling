@@ -1,7 +1,7 @@
 const modal = () => {
     let popUpBtn = document.querySelectorAll('.popup-btn');
     let popup = document.querySelector('.popup');                           //popup
-    let popUpClose = popup.querySelector('.popup-close');
+    //let popUpClose = popup.querySelector('.popup-close');
 
     let popupContent = document.querySelector('.popup-content');            //popupContent
     let count = 0;
@@ -30,8 +30,14 @@ const modal = () => {
         })
     });
 
-    popUpClose.addEventListener('click', () => {
-        popup.style.display = 'none'
+    // popUpClose.addEventListener('click', () => {
+    //     popup.style.display = 'none'
+    // })
+
+    popup.addEventListener('click', (e) => {
+        if(!e.target.closest('.popup-content') || e.target.classList.contains("popup-close")) {                 // не модалка, а null ------
+            popup.style.display = 'none'                                                                        // закрытие или в поле , или в крестик модальное окно
+        }
     })
 }
 

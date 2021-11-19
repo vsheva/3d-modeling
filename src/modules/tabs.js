@@ -5,16 +5,23 @@ const tabs = () => {
 
 
     tabPanel.addEventListener("click", (e) => {
+        //console.log(e.target.closest(".service-header-tab"));
 
-        console.log("hello")
-        if (e.target.classList.contains("service-header-tab")) {
-            tabs.foreEach((elem, index) => {
-                console.log(elem)
-                console.log(index)
+        if (e.target.closest(".service-header-tab")) {
+            const tabBtn = e.target.closest(".service-header-tab")                             // создаем переменную
+
+            tabs.forEach((element, index) => {
+                if (element === tabBtn) {                                                      // навешиваем активный класс
+                    element.classList.add("active")
+                    tabContent[index].classList.remove("d-none")                         // появляется нужный контент
+                } else {
+                    element.classList.remove("active")
+                    tabContent[index].classList.add("d-none")                                    //  !!!
+
+                }
             });
         }
     });
-
 }
 
 
