@@ -15,6 +15,14 @@ const menu = () => {
             toggleMenu();
         }
     })
+
+
+
+
+    document.body.addEventListener("click", (e)=> {
+
+    })
+
 }
 
 export default menu;
