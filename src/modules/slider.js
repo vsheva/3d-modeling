@@ -58,7 +58,7 @@ const slider = () => {
     sliderBlock.addEventListener("click", (e) => {
         e.preventDefault();
 
-        if (!e.target.matches(".dot, .portfolio-btn")) {                                      //не имеет этого класса                                // внимательно 17-я минута
+        if (!e.target.matches(".dot, .portfolio-btn")) {                                                                 //не имеет этого класса
             return
         }
 
@@ -70,13 +70,13 @@ const slider = () => {
             currentSlide--
         } else if (e.target.classList.contains("dot")) {
             dots.forEach((dot, index) => {
-                if (e.target === dot) {                                                                           //выучить
+                if (e.target === dot) {                                                                                  //выучить
                     currentSlide = index
                 }
             })
         }
 
-        if (currentSlide >= slides.length) {                                                                       // прокрутка по стрелке
+        if (currentSlide >= slides.length) {                                                                             // прокрутка по стрелке
             currentSlide = 0;
         } else if (currentSlide < 0) {
             currentSlide = slides.length - 1
@@ -87,21 +87,21 @@ const slider = () => {
     })
 
     // ограничитель
-    sliderBlock.addEventListener("mouseenter", (e) => {                     // все события на мышь
-        if (e.target.matches(".dot, .portfolio-btn")) {                                      //не имеет этого класса                                // внимательно 17-я минута
-            stopSlide()                                                                      //когда наводим, то осанавливаем слайд
+    sliderBlock.addEventListener("mouseenter", (e) => {                                                  //события на мышь
+        if (e.target.matches(".dot, .portfolio-btn")) {                                                                     //
+            stopSlide()                                                                                                    //когда наводим, то осанавливаем слайд
         }
     }, true)
 
 
-    sliderBlock.addEventListener("mouseleave", (e) => {                  // все события на мышь
-        if (e.target.matches(".dot, .portfolio-btn")) {                                      //не имеет этого класса                                // внимательно 17-я минута
-            startSlide(timerInterval)                                                                      // когда убираем, то начинаем слайд
+    sliderBlock.addEventListener("mouseleave", (e) => {                                                 //события на мышь
+        if (e.target.matches(".dot, .portfolio-btn")) {                                                                  //
+            startSlide(timerInterval)                                                                                     //
         }
     }, true)
     // ограничитель
     addDots()
-    startSlide(timerInterval);                                                              // заменяем
+    startSlide(timerInterval);
 }
 
 
