@@ -8,6 +8,7 @@ const slider = () => {
     const addDots = () => {
 
         for (let i = 0; i < slides.length; i++) {
+            dots[i].classList.remove("dot")
             let newDot = document.createElement('li');
             newDot.classList.add("dot");
             if (i === 0) {
