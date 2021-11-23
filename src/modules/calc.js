@@ -5,10 +5,7 @@ const calc = (price = 100) => {
     const calcSquare = document.querySelector(".calc-square")
     const calcCount = document.querySelector(".calc-count")
     const calcDay = document.querySelector(".calc-day")
-    const total = document.querySelector(".calc-total")
-
-    console.log(calcType)
-
+    const total = document.querySelector("#total")
 
     const countCalc = () => {
         const calcTypeValue = +calcType.options[calcType.selectedIndex].value
@@ -29,12 +26,12 @@ const calc = (price = 100) => {
             calcDayValue = 1.5
         }
 
-        if (calcTypeValue && calcSquareValue) {
+        if (calcType.value && calcSquare.value) {
             totalValue = price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue
         } else {
             totalValue = 0
         }
-        total.textContent = totalValue
+        total.textContent = `${totalValue} ₽`
     }
 
 
@@ -44,10 +41,10 @@ const calc = (price = 100) => {
             countCalc()
         }
     });
-
-
-
 }
 
 
 export default calc;
+
+
+
