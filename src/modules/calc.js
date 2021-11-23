@@ -26,7 +26,7 @@ const calc = (price = 100) => {
         } else if (calcDay.value && calcDay.value < 10) {
             calcDayValue = 1.5
         }
-         // основное
+        // основное
         // if (calcType.value && calcSquare.value) {
         //     totalValue = price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue
         // } else {
@@ -38,18 +38,19 @@ const calc = (price = 100) => {
         if (calcType.value && calcSquare.value) {
 
             totalValue = price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue
-            //Запуск анимации итога
-            let counter = 0;
-            const step = Math.round(totalValue / 100 * 25);
-            let countId = setInterval(() => {
-                if (counter >= totalValue) {
-                    clearInterval(countId);
+
+            //Запуск анимации
+            let step = 25;
+            let n = 0;
+            let t = Math.round(100 / (totalValue / 25));
+            let interval = setInterval(() => {
+                n = n + step;
+                if (n >= totalValue) {
+                    clearInterval(interval);
                     total.textContent = Math.floor(totalValue);
-                } else {
-                    counter = counter + step;
-                    total.textContent = counter;
                 }
-            }, 30);
+                total.innerHTML = n;
+            }, t);
         }
     };
 
@@ -64,6 +65,5 @@ const calc = (price = 100) => {
 
 
 export default calc;
-
 
 
