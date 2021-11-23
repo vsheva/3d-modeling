@@ -8,10 +8,10 @@ import slider from './modules/slider';
 import calc from './modules/calc';
 
 
-timer("20 november 2021");
+timer("01 December 2021");
 menu();
 modal();
 validate();
 tabs();
 slider();
-calc(100);
+calc();
