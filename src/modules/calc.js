@@ -50,7 +50,7 @@ const calc = (price = 100) => {
                     total.textContent = Math.floor(totalValue);
                 }
                 total.innerHTML = n;
-            }, t);
+            }, 1000);
         }
     };
 
