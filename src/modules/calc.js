@@ -42,6 +42,7 @@ const calc = (price = 100) => {
             //Запуск анимации
             let step = 25;
             let n = 0;
+            //let t = Math.round(100 / (totalValue / 25));
             let t = Math.round(100 / (totalValue / 25));
             let interval = setInterval(() => {
                 n = n + step;
