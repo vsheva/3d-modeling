@@ -1,4 +1,6 @@
 "use strict"
+import {animate} from './helpers'
+
 const calc = (price = 100) => {
     const calcBlock = document.querySelector(".calc-block")
     const calcType = document.querySelector(".calc-type")
@@ -35,24 +37,44 @@ const calc = (price = 100) => {
         // total.textContent = `${totalValue} ₽`
         //let countId,
 
+
+
+        ///
         if (calcType.value && calcSquare.value) {
 
             totalValue = price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue
 
             //Запуск анимации
-            let step = 25;
-            let n = 0;
-            let t = Math.round(100 / (totalValue / 25));
-            let interval = setInterval(() => {
-                n = n + step;
-                if (n >= totalValue) {
-                    clearInterval(interval);
-                    total.textContent = Math.floor(totalValue);
+            // let step = 100;
+            // let time = 2000
+            // let t = Math.round(time / (totalValue / step));
+            // let interval = setInterval(() => {
+            //
+            //     let n = 0;
+            //     n = n + step;
+            //     if (n === totalValue) {
+            //         clearInterval(interval);
+            //
+            //     }
+            //     total.innerHTML = totalValue;
+            //     //total.textContent = ;
+            // }, t);
+
+
+
+            animate({
+                duration: 1000,
+                timing(timeFraction) {
+                    return timeFraction;
+                },
+                draw(progress) {
+                    elem.style.width = progress * 100 + '%';
                 }
-                total.innerHTML = n;
-            }, 1000);
+            });
+
         }
     };
+
 
 
     calcBlock.addEventListener("change", (e) => {
