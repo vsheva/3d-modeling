@@ -40,18 +40,21 @@ const calc = (price = 100) => {
             totalValue = price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue
 
             //Запуск анимации
-            let step = 25;
-            let n = 0;
-            //let t = Math.round(100 / (totalValue / 25));
-            let t = Math.round(100 / (totalValue / 25));
+            let step = 100;
+            let time = 2000
+            let t = Math.round(time / (totalValue / step));
             let interval = setInterval(() => {
+
+                let n = 0;
                 n = n + step;
-                if (n >= totalValue) {
+                if (n == totalValue) {
                     clearInterval(interval);
-                    total.textContent = Math.floor(totalValue);
+
                 }
-                total.innerHTML = n;
+                total.innerHTML = totalValue;
+                //total.textContent = ;
             }, t);
+
         }
     };
 
@@ -66,5 +69,15 @@ const calc = (price = 100) => {
 
 
 export default calc;
+
+
+
+
+
+
+
+
+
+
 
 
