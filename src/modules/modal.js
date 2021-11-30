@@ -1,9 +1,9 @@
 const modal = () => {
     let popUpBtn = document.querySelectorAll('.popup-btn');
-    let popup = document.querySelector('.popup');                           //popup
+    let popup = document.querySelector('.popup');                           //
     //let popUpClose = popup.querySelector('.popup-close');
 
-    let popupContent = document.querySelector('.popup-content');            //popupContent
+    let popupContent = document.querySelector('.popup-content');            //
     let count = 0;
     let idAnimation
 
@@ -21,7 +21,7 @@ const modal = () => {
     }
 
 
-    popUpBtn.forEach(elem => {                                            // супер!!! потренироваться писать такой код
+    popUpBtn.forEach(elem => {                                            // супер!!!
         elem.addEventListener('click', () => {
             if (screen.width >= 768) {
                 idAnimation = requestAnimationFrame(popupAnimation)
@@ -39,6 +39,7 @@ const modal = () => {
             popup.style.display = 'none'                                                                        // закрытие или в поле , или в крестик модальное окно
         }
     })
+
 }
 
 modal()
