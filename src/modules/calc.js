@@ -42,19 +42,26 @@ const calc = (price = 100) => {
             //Запуск анимации
             let step = 100;
             let time = 2000
-            let t = Math.round(2000 / (totalValue / 100));
-            let interval = setInterval(() => {
+            let t = Math.round(time / (totalValue / step));
+            let n = 0;
 
-                let n = 0;
+            let interval = setInterval(() => {
                 n = n + step;
                 if (n == totalValue) {
                     clearInterval(interval);
-
                 }
                 total.innerHTML = totalValue;
-                //total.textContent = ;
+
             }, t);
 
+
+            // $({numberValue: total}).animate({numberValue: totalValue}, {
+            //     duration: 1000,
+            //     easing: 'linear',
+            //     step: function() {
+            //         $('#total').text(Math.ceil(this.numberValue));
+            //     }
+            // });
         }
     };
 
