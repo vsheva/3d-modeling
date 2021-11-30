@@ -1,9 +1,9 @@
 const modal = () => {
     let popUpBtn = document.querySelectorAll('.popup-btn');
-    let popup = document.querySelector('.popup');                           //
+    let popup = document.querySelector('.popup');
     //let popUpClose = popup.querySelector('.popup-close');
 
-    let popupContent = document.querySelector('.popup-content');            //
+    let popupContent = document.querySelector('.popup-content');
     let count = 0;
     let idAnimation
 
@@ -21,7 +21,7 @@ const modal = () => {
     }
 
 
-    popUpBtn.forEach(elem => {                                            // супер!!!
+    popUpBtn.forEach(elem => {                                            // !!!
         elem.addEventListener('click', () => {
             if (screen.width >= 768) {
                 idAnimation = requestAnimationFrame(popupAnimation)
@@ -35,7 +35,7 @@ const modal = () => {
     // })
 
     popup.addEventListener('click', (e) => {
-        if(!e.target.closest('.popup-content') || e.target.classList.contains("popup-close")) {                 // не модалка, а null ------
+        if (!e.target.closest('.popup-content') || e.target.classList.contains("popup-close")) {                 // не модалка, а null ------
             popup.style.display = 'none'                                                                        // закрытие или в поле , или в крестик модальное окно
         }
     })
