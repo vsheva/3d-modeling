@@ -1,9 +1,10 @@
 const modal = () => {
     let popUpBtn = document.querySelectorAll('.popup-btn');
-    let popup = document.querySelector('.popup');                           //popup
-    let popUpClose = popup.querySelector('.popup-close');
+    let popUpClose = document.querySelector('.popup-close');
 
+    let popup = document.querySelector('.popup');                           //popup
     let popupContent = document.querySelector('.popup-content');            //popupContent
+
     let count = 0;
     let idAnimation
 
@@ -26,6 +27,9 @@ const modal = () => {
             if (screen.width >= 768) {
                 idAnimation = requestAnimationFrame(popupAnimation)
             }
+            // else {
+            //     cancelAnimationFrame(idAnimation)
+            // }
             popup.style.display = 'block'
         })
     });
