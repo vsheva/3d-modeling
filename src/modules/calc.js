@@ -27,32 +27,33 @@ const calc = (price = 100) => {
             calcDayValue = 1.5
         }
         // основное
-        // if (calcType.value && calcSquare.value) {
-        //     totalValue = price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue
-        // } else {
-        //     totalValue = 0
-        // }
-        // total.textContent = `${totalValue} ₽`
+        if (calcType.value && calcSquare.value) {
+            totalValue = price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue
+        } else {
+            totalValue = 0
+        }
+        total.textContent = `${totalValue} ₽`
+
         //let countId,
 
-        if (calcType.value && calcSquare.value) {
-
-            totalValue = price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue
+        // if (calcType.value && calcSquare.value) {
+        //
+        //     totalValue = price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue
 
             //Запуск анимации
-            let step = 100;
-            let time = 2000
-            let t = Math.round(time / (totalValue / step));
-            let n = 0;
-
-            let interval = setInterval(() => {
-                n = n + step;
-                if (n == totalValue) {
-                    clearInterval(interval);
-                }
-                total.innerHTML = totalValue;
-
-            }, t);
+            // let step = 100;
+            // let time = 2000
+            // let t = Math.round(time / (totalValue / step));
+            // let n = 0;
+            //
+            // let interval = setInterval(() => {
+            //     n = n + step;
+            //     if (n == totalValue) {
+            //         clearInterval(interval);
+            //     }
+            //     total.innerHTML = totalValue;
+            //
+            // }, t);
 
 
             // $({numberValue: total}).animate({numberValue: totalValue}, {
@@ -61,9 +62,10 @@ const calc = (price = 100) => {
             //     step: function() {
             //         $('#total').text(Math.ceil(this.numberValue));
             //     }
-            // });
+           //= });
         }
-    };
+
+
 
 
     calcBlock.addEventListener("change", (e) => {
@@ -71,7 +73,7 @@ const calc = (price = 100) => {
         if (e.target === calcType || e.target === calcSquare || e.target === calcCount || e.target === calcDay) {
             countCalc()
         }
-    });
+    })
 }
 
 
