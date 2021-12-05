@@ -8,6 +8,7 @@ const sendForm = ({formId, someElem = []}) => {
 
 
 
+    const formValidate = () => {
         const phoneInput = form.querySelector('input[name="user_phone"]');
         phoneInput.addEventListener('input', () => {
             phoneInput.value = phoneInput.value.replace(/[^\d\(\)\+\-]/gi, '');
@@ -23,8 +24,7 @@ const sendForm = ({formId, someElem = []}) => {
             messageInput.value = messageInput.value.replace(/[^а-я\d\s\,\.\!\-\:\;\"\?\(\)]/gi, '');
         });
 
-
-
+    }
 
 
     const validate = (list) => {
@@ -32,6 +32,8 @@ const sendForm = ({formId, someElem = []}) => {
         list.forEach(input => {
             if(!input.classList.contains("success")){
                 success = false;
+            } else {
+                formValidate()
             }
         })
        return success;
