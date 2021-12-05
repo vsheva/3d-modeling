@@ -20,19 +20,19 @@ const validate = () => {
 
 
     let validFormText = () => {
-        //const formText = document.querySelector(".mess")
-        const formText = document.querySelector("input[name='user_message']")
+        const formText = document.querySelector(".mess")
+        //const formText = document.querySelector("input[name='user_message']")
         formText.addEventListener("input", (e) => {
-            //e.target.value = e.target.value.replace(/[^а-я\-\s]/gi, '');
-            e.target.value = e.target.value.replace(/[^а-я\d\s\,\.\!\-\:\;\"\?]/gi, '');
+            e.target.value = e.target.value.replace(/[^а-я\-\s]/gi, '');
+            //e.target.value = e.target.value.replace(/[^а-я\d\s\,\.\!\-\:\;\"\?]/gi, '');
         })
     }
     validFormText();
 
 
     let validFormName = () => {
-        //let formName = document.querySelectorAll('[placeholder="Ваше имя"]')
-        let formName = document.querySelectorAll("input[name='user_name']")
+        let formName = document.querySelectorAll('[placeholder="Ваше имя"]')
+        //let formName = document.querySelectorAll("input[name='user_name']")
         formName.forEach(element => {
             element.addEventListener("input", (e) => {
                 e.target.value = e.target.value.replace(/[^а-я\s]/gi, '');
@@ -54,11 +54,11 @@ const validate = () => {
 
 
     let validFormPhone = () => {
-        //let formPhone = document.querySelectorAll('input[type="tel"]')
-        let formPhone = document.querySelectorAll('input[name="user_phone"]')
+        let formPhone = document.querySelectorAll('input[type="tel"]')
+        //let formPhone = document.querySelectorAll('input[name="user_phone"]')
         formPhone.forEach(element => {
             element.addEventListener("input", (e) => {
-                e.target.value = e.target.value.replace(/[^\d\(\)\+\-]/gi, '');
+                e.target.value = e.target.value.replace(/[^\d\(\)\-]/gi, '');
             })
         })
     }

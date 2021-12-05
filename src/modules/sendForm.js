@@ -7,15 +7,35 @@ const sendForm = ({formId, someElem = []}) => {
     const successText = 'Спасибо! Наш менеджер с вами свяжется!'
 
 
+
+        const phoneInput = form.querySelector('input[name="user_phone"]');
+        phoneInput.addEventListener('input', () => {
+            phoneInput.value = phoneInput.value.replace(/[^\d\(\)\+\-]/gi, '');
+        });
+
+        const nameInput = form.querySelector("input[name='user_name']");
+        nameInput.addEventListener('input', () => {
+            nameInput.value = nameInput.value.replace(/[^а-я\s]/gi, '');
+        });
+
+        const messageInput = document.querySelector("input[name='user_message']");
+        messageInput.addEventListener('input', () => {
+            messageInput.value = messageInput.value.replace(/[^а-я\d\s\,\.\!\-\:\;\"\?\(\)]/gi, '');
+        });
+
+
+
+
+
     const validate = (list) => {
         let success = true;
+        list.forEach(input => {
+            if(!input.classList.contains("success")){
+                success = false;
+            }
+        })
+       return success;
 
-        // list.forEach(input => {
-        //     if(!input.classList.contains("success")){
-        //         success = false;
-        //     }
-        // })
-        return success;
     }
 
 
@@ -54,6 +74,8 @@ const sendForm = ({formId, someElem = []}) => {
             }
         })
 
+        /// проверка инпута на правильный ввод и на запрет ввода опред.символов
+
 
         if (validate(formElements)) {
             sendData(formBody)
@@ -82,7 +104,6 @@ const sendForm = ({formId, someElem = []}) => {
 
         form.addEventListener("submit", (event) => {
             event.preventDefault()
-
             submitForm()
         })
     } catch (error) {
@@ -91,3 +112,36 @@ const sendForm = ({formId, someElem = []}) => {
 }
 
 export default sendForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const validate = (list) => {
+//     let success = true;
+    // list.forEach(input => {
+    //     if(!input.classList.contains("success")){
+    //         success = false;
+    //     }
+    // })
+//     return success;
+// }
+
