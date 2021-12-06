@@ -7,6 +7,8 @@ import tabs from './modules/tabs';
 import slider from './modules/slider';
 import calc from './modules/calc';
 import sendForm from './modules/sendForm';
+import formValidation from './modules/formValidation';
+
 
 
 timer("01 January 2022");
@@ -16,6 +18,36 @@ validate();
 tabs();
 slider();
 calc();
+sendForm();
+formValidation();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // sendForm({
 //     formId: "form1",
 //     someElem: [
@@ -37,4 +69,35 @@ calc();
 // });
 
 
-sendForm();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

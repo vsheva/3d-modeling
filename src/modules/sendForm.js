@@ -53,7 +53,7 @@ const sendForm = () => {
 
     document.body.addEventListener('submit', (event) => {
         event.preventDefault()
-        if (event.target.querySelector('[placeholder~="E-mail"]').value.trim() !== '') {
+        if (event.target.querySelector('[placeholder="E-mail"]').value.trim() !== '') {
             formSubmit(event.target)
         }
     })
