@@ -16,22 +16,25 @@ validate();
 tabs();
 slider();
 calc();
-sendForm({
-    formId: "form1",
-    someElem: [
-        {
-            type: "block",
-            id: "total"
-        }
-    ]
-});
+// sendForm({
+//     formId: "form1",
+//     someElem: [
+//         {
+//             type: "block",
+//             id: "total"
+//         }
+//     ]
+// });
+//
+// sendForm({
+//     formId: "form2",
+//
+// });
+//
+// sendForm({
+//     formId: "form3",
+//
+// });
 
-sendForm({
-    formId: "form2",
 
-});
-
-sendForm({
-    formId: "form3",
-
-});
+sendForm();

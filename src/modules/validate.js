@@ -67,3 +67,45 @@ const validate = () => {
 
 
 export default validate;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const formValidate = () => {
+//     const phoneInput = form.querySelector('input[name="user_phone"]');
+//     phoneInput.addEventListener('input', () => {
+//         phoneInput.value = phoneInput.value.replace(/[^\d\(\)\+\-]/gi, '');
+//     });
+//
+//     const nameInput = form.querySelector("input[name='user_name']");
+//     nameInput.addEventListener('input', () => {
+//         nameInput.value = nameInput.value.replace(/[^а-я\s]/gi, '');
+//     });
+//
+//     const messageInput = document.querySelector("input[name='user_message']");
+//     messageInput.addEventListener('input', () => {
+//         messageInput.value = messageInput.value.replace(/[^а-я\d\s\,\.\!\-\:\;\"\?\(\)]/gi, '');
+//     });
+//
+// }
+
