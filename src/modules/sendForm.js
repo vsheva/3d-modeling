@@ -1,56 +1,73 @@
+'use strict'
 
-'use strict';
-const sendForm = () => {
-    const errorMessage = 'Что-то пошло не так...';
-    const loadMessage = 'Загрузка...';
-    const successMessage = 'Спасибо! Мы скоро с Вами свяжемся!';
-    const statusMessage = document.createElement('div');
-    statusMessage.style.cssText = 'font-size: 2rem; color: #ffffff';
-    //Функция отправки данных на сервер и обработки ответа
-    const postData = (data) => {
+const sendForm = (formId) => {
+    const form = document.getElementById(formId);
+    const errorText = 'Что-то пошло не так...';
+    const loadText = 'Загрузка...';
+    const successText = 'Спасибо! Мы скоро с Вами свяжемся!';
+    const status = document.createElement('div');
+    console.log(form)
+
+    // функция валидейт
+      const validate = (list) =>{
+       let success = true
+
+          return success
+      }
+    // конец валидейта
+
+
+    const sendData = (data) => {
         return fetch("https://jsonplaceholder.typicode.com/posts", {
             method: 'POST',
+            body: JSON.stringify(data),
             headers: {
                 "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        });
-    };
-    const formSubmit = (target) => {
-        target.appendChild(statusMessage);
-        statusMessage.textContent = loadMessage;
-        const formData = new FormData(target);
-        target.reset();
-        const removeMessage = () => {
-            setTimeout(() => statusMessage.remove(), 5000);
-        };
-        const closePopUpSend = () => {
-            setTimeout(() => {
-                if (target.matches('#form3')) {
-                    document.querySelector('.popup').style.display = 'none';
-                }
-            }, 5000);
-        };
-        postData(formData).then((response) => {
-            if (response.status !== 200) {
-                throw new Error('Status network not 200');
             }
-            statusMessage.textContent = successMessage;
-            removeMessage();
-            closePopUpSend();
-        }).catch(error => {
-            statusMessage.textContent = errorMessage;
-            console.error(error);
-            removeMessage();
-        });
-    };
-    document.body.addEventListener('submit', (event) => {
-        event.preventDefault();
-        if (event.target.querySelector('[placeholder~="E-mail"]').value.trim() !== '') {
-            formSubmit(event.target);
+        }).then(res => res.json())
+    }
+
+
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault()
+
+        const formData = new FormData(form)
+        const formBody = {}
+        const formElements=form.querySelectorAll("input")
+
+
+        status.textContent = loadText
+        form.append(status)
+
+        formData.forEach((val, key) => {
+            formBody[key] = val
+        })
+
+
+        //
+        if (validate(formElements)) {
+            sendData(formBody)
+                .then(data => {
+                status.textContent=successText
+
+                formElements.forEach(input =>{
+                   input.value=''
+                })
+            })
+                .catch(err => {
+                    status.textContent=errorText
+                })
         }
-    });
-};
+        //
+
+        // sendData(formBody).then(data => {
+        //     console.log(data)
+        // })
+
+    })
+
+}
 
 export default sendForm;
 
@@ -87,28 +104,56 @@ export default sendForm;
 
 
 
-//По уроку
-// const sendForm = ({formId, someElem = []}) => {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// !!!!!!!!          __________________________простая отправка данных формы на сервер________________________________________________ 10 минут урока !!!!
+
+
+// const sendForm = (formId) => {
 //     const form = document.getElementById(formId);
-//     // оповещение
-//     const statusBlock = document.createElement("div")
-//     const loadText = 'Загрузка...'
-//     const errorText = 'Ошибка...'
-//     const successText = 'Спасибо! Наш менеджер с вами свяжется!'
-//
-//
-//     const validate = (list) => {
-//         let success = true;
-//         list.forEach(input => {
-//             if (!input.classList.contains("success")) {
-//                 success = false;
-//             } else {
-//                 formValidate()
-//             }
-//         })
-//         return success;
-//
-//     }
+//     console.log(form)
 //
 //
 //     const sendData = (data) => {
@@ -121,71 +166,92 @@ export default sendForm;
 //         }).then(res => res.json())
 //     }
 //
-//     //////////submitForm
-//     const submitForm = () => {
-//         const formElements = form.querySelectorAll("input")
+//
+//     form.addEventListener("submit", (event) => {
+//         event.preventDefault()
+//
 //         const formData = new FormData(form)
 //         const formBody = {}
-//
-//         // оповещение
-//         statusBlock.textContent = loadText
-//         form.append(statusBlock)
-//         //
-//
 //         formData.forEach((val, key) => {
 //             formBody[key] = val
 //         })
 //
-//         someElem.forEach(elem => {
-//             const element = document.getElementById(elem.id)   //
-//
-//             if (elem.type === "block") {
-//                 formBody[elem.id] = element.textContent
-//             } else if (elem.type === "input") {
-//                 formBody[elem.id] = element.value
-//             }
+//         sendData(formBody).then(data => {
+//             console.log(data)
 //         })
-//
-//         /// проверка инпута на правильный ввод и на запрет ввода опред.символов
-//
-//
-//         if (validate(formElements)) {
-//             sendData(formBody)
-//                 .then(data => {
-//                     //оповещение
-//                     statusBlock.textContent = successText
-//
-//                     formElements.forEach(input => {
-//                         input.value = ''
-//                     })
-//                 })
-//                 .catch(error => {
-//                     statusBlock.textContent = errorText
-//                 })
-//         } else {
-//             alert("Данные не валидны!")
-//         }
-//     }
-// /////////////////////////////////
+//     })
 //
 //
-//     try {
-//         if (!form) {
-//             throw new Error("Верните форму на место, пожалуйста))")
-//         }
-//
-//         form.addEventListener("submit", (event) => {
-//             event.preventDefault()
-//             submitForm()
-//         })
-//     } catch (error) {
-//         console.error(error.message);
-//     }
 // }
 //
 // export default sendForm;
+
+
+
+
+
+
+
+
+
+
+
+//решение
+// 'use strict';
+// const sendForm = () => {
+//     const errorMessage = 'Что-то пошло не так...';
+//     const loadMessage = 'Загрузка...';
+//     const successMessage = 'Спасибо! Мы скоро с Вами свяжемся!';
+//     const statusMessage = document.createElement('div');
+//     statusMessage.style.cssText = 'font-size: 2rem; color: #ffffff';
+//     //Функция отправки данных на сервер и обработки ответа
+//     const postData = (formData) => {
+//         return fetch('./server.php', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'multipart/form-data'
+//             },
+//             body: formData
+//         });
+//     };
+//     const formSubmit = (target) => {
+//         target.appendChild(statusMessage);
+//         statusMessage.textContent = loadMessage;
+//         const formData = new FormData(target);
+//         target.reset();
+//         const removeMessage = () => {
+//             setTimeout(() => statusMessage.remove(), 5000);
+//         };
+//         const closePopUpSend = () => {
+//             setTimeout(() => {
+//                 if (target.matches('#form3')) {
+//                     document.querySelector('.popup').style.display = 'none';
+//                 }
+//             }, 5500);
+//         };
+//         postData(formData).then((response) => {
+//             if (response.status !== 200) {
+//                 throw new Error('Status network not 200');
+//             }
+//             statusMessage.textContent = successMessage;
+//             removeMessage();
+//             closePopUpSend();
+//         }).catch(error => {
+//             statusMessage.textContent = errorMessage;
+//             console.error(error);
+//             removeMessage();
+//         });
+//     };
+//     document.body.addEventListener('submit', (event) => {
+//         event.preventDefault();
+//         if (event.target.querySelector('[placeholder~="E-mail"]').value.trim() !== '') {
+//             formSubmit(event.target);
+//         }
+//     });
+// };
 //
-//
+// export default sendForm;
+
 
 
 
@@ -243,3 +309,12 @@ export default sendForm;
 //     document.querySelectorAll("form").forEach((elem) => submitForm(elem));
 // };
 // export default sendForm;
+
+
+
+
+
+
+
+
+
