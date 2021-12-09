@@ -48,10 +48,10 @@ const timer = (deadline) => {
         //     setTimeout(updateClock,1000)
         // }
     }
-
+    updateClock()
     let intervalId = setInterval(updateClock, 1000)
 
-    //updateClock()
+
 
 }
 

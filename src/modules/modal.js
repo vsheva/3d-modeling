@@ -12,8 +12,8 @@ const modal = () => {
         idAnimation = requestAnimationFrame(popupAnimation)
         count++;
 
-        if (count < 50) {
-            popupContent.style.top = count * 2 + "px"
+        if (count < 10) {
+            popupContent.style.top = count * 20 + "px"
         } else {
             cancelAnimationFrame(idAnimation)
             count = 0;

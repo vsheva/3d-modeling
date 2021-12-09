@@ -8,13 +8,14 @@ const sendForm = (formId) => {
     const status = document.createElement('div');
     console.log(form)
 
-    // функция валидейт
-      const validate = (list) =>{
-       let success = true
+    status.style.cssText = "font-size: 2rem; color: #fff";
 
-          return success
-      }
-    // конец валидейта
+
+    const validate = (list) => {
+        let success = true
+
+        return success
+    }
 
 
     const sendData = (data) => {
@@ -28,17 +29,31 @@ const sendForm = (formId) => {
     }
 
 
-
     form.addEventListener("submit", (event) => {
         event.preventDefault()
 
         const formData = new FormData(form)
         const formBody = {}
-        const formElements=form.querySelectorAll("input")
+        const formElements = form.querySelectorAll("input")
+
+
+        //
+        const removeMessage = () => {
+            setTimeout(() => status.remove(), 2000);
+        };
+        //
 
 
         status.textContent = loadText
         form.append(status)
+
+
+        // прелоадер:
+        status.innerHTML = `<div class="sk-double-bounce">
+        <div class="sk-child sk-double-bounce-1"></div>
+        <div class="sk-child sk-double-bounce-2"></div>
+      </div>`;
+
 
         formData.forEach((val, key) => {
             formBody[key] = val
@@ -49,27 +64,55 @@ const sendForm = (formId) => {
         if (validate(formElements)) {
             sendData(formBody)
                 .then(data => {
-                status.textContent=successText
+                    status.textContent = successText
 
-                formElements.forEach(input =>{
-                   input.value=''
+                    formElements.forEach(input => {
+                        input.value = ''
+                    })
+                    //
+                    setTimeout(() => {
+                        document.querySelector(".popup").style.display = "none";
+                    }, 3000);
+
+                    removeMessage();
+
+                    //
                 })
-            })
                 .catch(err => {
-                    status.textContent=errorText
+                    status.textContent = errorText
+                    removeMessage();
                 })
         }
-        //
 
-        // sendData(formBody).then(data => {
-        //     console.log(data)
-        // })
 
     })
 
 }
 
 export default sendForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -187,15 +230,6 @@ export default sendForm;
 // export default sendForm;
 
 
-
-
-
-
-
-
-
-
-
 //решение
 // 'use strict';
 // const sendForm = () => {
@@ -253,17 +287,6 @@ export default sendForm;
 // export default sendForm;
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Решение Милессы
 // "use strict"
 // const sendForm = () => {
@@ -304,9 +327,9 @@ export default sendForm;
 //             }).catch((error) => {
 //                 showStatus("error");
 //             });
-//         });
+//    });
 //     };
-//     document.querySelectorAll("form").forEach((elem) => submitForm(elem));
+// //     document.querySelectorAll("form").forEach((elem) => submitForm(elem));
 // };
 // export default sendForm;
 
