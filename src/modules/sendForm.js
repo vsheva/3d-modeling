@@ -17,7 +17,6 @@ const sendForm = (formId) => {
         return success
     }
 
-
     const sendData = (data) => {
         return fetch("https://jsonplaceholder.typicode.com/posts", {
             method: 'POST',
