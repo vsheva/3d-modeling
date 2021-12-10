@@ -14,12 +14,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/calc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/calc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/calcValidate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/calcValidate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/formValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/formValidation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/sendForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/sendForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/timer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +108,8 @@
       <workItem from="1638868130734" duration="9923000" />
       <workItem from="1638879267951" duration="41441000" />
       <workItem from="1639012497496" duration="3520000" />
-      <workItem from="1639155756626" duration="666000" />
+      <workItem from="1639155756626" duration="8127000" />
+      <workItem from="1639167120064" duration="3888000" />
     </task>
     <servers />
   </component>
@@ -223,9 +224,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="271" key="scopes/0.0.1536.824@0.0.1536.824" timestamp="1637255428881" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1638721590491">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1639162989828">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1638721590491" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1639162989828" />
   </component>
 </project>

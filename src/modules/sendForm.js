@@ -1,4 +1,4 @@
-import {blockBody, unBlockBody} from './helpers'
+import {unBlockBody} from './helpers'
 
 const sendForm = (formId) => {
     const form = document.getElementById(formId);
@@ -6,7 +6,7 @@ const sendForm = (formId) => {
     const loadText = 'Загрузка...';
     const successText = 'Спасибо! Мы скоро с Вами свяжемся!';
     const status = document.createElement('div');
-    console.log(form)
+
 
     status.style.cssText = "font-size: 2rem; color: #fff";
 

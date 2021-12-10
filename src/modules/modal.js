@@ -9,22 +9,20 @@ const modal = () => {
 
     const showPopup = () => {
         animate({
-            duration: 1000,
+            duration: 300,
             timing(timeFraction) {
                 return timeFraction;
             },
             draw(progress) {
-                // popupContent.style.top = (150 * progress) + "px"
-                popupContent.style.opacity = progress
-
+                popupContent.style.top = (20 * progress) + "%"
+                // popupContent.style.opacity = progress
             }
         });
-
     }
 
     popUpBtn.forEach(elem => {
         elem.addEventListener('click', () => {
-            if (screen.width >= 768) {
+            if (document.documentElement.clientWidth >= 768) {
                 showPopup()
             }
             popup.style.display = 'block'
@@ -44,6 +42,190 @@ const modal = () => {
 modal()
 
 export default modal;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -216,5 +398,41 @@ export default modal;
 // export default modal;
 
 
-
-
+//использование хелпера
+// "use strict";
+//
+// import { animate, blockBody, unBlockBody } from "./helpers";
+//
+// const modal = () => {
+//   const popup = document.querySelector(".popup"),
+//     popupBtn = document.querySelectorAll(".popup-btn"),
+//     popupContent = popup.querySelector(".popup-content");
+//
+//   popupBtn.forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//       popup.style.display = "block";
+//       animate({
+//         duration: 500,
+//         timing(timeFraction) {
+//           return timeFraction;
+//         },
+//         draw(progress) {
+//           popupContent.style.top = 25 * progress + "%";
+//           blockBody();
+//         },
+//       });
+//     });
+//   });
+//
+//   popup.addEventListener("click", (e) => {
+//     if (
+//       !e.target.closest(".popup-content") ||
+//       e.target.classList.contains("popup-close")
+//     ) {
+//       popup.style.display = "none";
+//       unBlockBody();
+//     }
+//   });
+// };
+//
+// export default modal;

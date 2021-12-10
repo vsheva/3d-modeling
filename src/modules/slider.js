@@ -4,30 +4,26 @@ const slider = () => {
     const slides = document.querySelectorAll(".portfolio-item")
     let dots = document.querySelectorAll(".dot")
     const portfolioDots = document.querySelector(".portfolio-dots")
-
+    let currentSlide = 0
 
 
     const addDots = () => {
-
-        for (let i = 0; i < slides.length; i++) {
-            dots[i].classList.remove("dot")
-            let newDot = document.createElement("li")
-            newDot.classList.add("dot")
-            if (i === 0) {
-                newDot.classList.add("dot-active")
+        slides.forEach((item, index) => {
+            const newDot = document.createElement('li');
+            newDot.classList.add('dot');
+            if (index === 0) {
+                newDot.classList.add('dot-active');
             }
-            portfolioDots.append(newDot)
-            dots = document.querySelectorAll(".dot")
-        }
+            portfolioDots.append(newDot);
+            newDot.classList.remove("dot")
+        });
+        dots = document.querySelectorAll('.dot');
     }
 
 
-    //dot-active
-    const timerInterval = 2000 // создаем (потом заменяем)
-    let currentSlide = 0
+
+    const timerInterval = 2000
     let interval
-
-
     const prevSlide = (elements, index, strClass) => {
         elements[index].classList.remove(strClass);
     }
@@ -44,11 +40,11 @@ const slider = () => {
         if (currentSlide >= slides.length) {
             currentSlide = 0;
         }
-
-
         nexSlide(slides, currentSlide, "portfolio-item-active");
         nexSlide(dots, currentSlide, "dot-active");
     }
+
+
 
 
     const startSlide = (timer = 1500) => {
@@ -56,13 +52,18 @@ const slider = () => {
     }
 
 
+
+
     const stopSlide = () => {
         clearInterval(interval);
     }
+
+
+
     sliderBlock.addEventListener("click", (e) => {
         e.preventDefault();
 
-        if (!e.target.matches(".dot, .portfolio-btn")) {                                                                 //не имеет этого класса
+        if (!e.target.matches(".dot, .portfolio-btn")) {
             return
         }
 
@@ -74,35 +75,44 @@ const slider = () => {
             currentSlide--
         } else if (e.target.classList.contains("dot")) {
             dots.forEach((dot, index) => {
-                if (e.target === dot) {                                                                                  //выучить
+                if (e.target === dot) {
                     currentSlide = index
                 }
             })
         }
 
-        if (currentSlide >= slides.length) {                                                                             // прокрутка по стрелке
+
+        if (currentSlide >= slides.length) {
             currentSlide = 0;
         } else if (currentSlide < 0) {
             currentSlide = slides.length - 1
         }
 
+
         nexSlide(slides, currentSlide, "portfolio-item-active");
         nexSlide(dots, currentSlide, "dot-active");
     })
 
+
+
     // ограничитель
-    sliderBlock.addEventListener("mouseenter", (e) => {                                                  //события на мышь
-        if (e.target.matches(".dot, .portfolio-btn")) {                                                                     //
-            stopSlide()                                                                                                    //когда наводим, то осанавливаем слайд
+    sliderBlock.addEventListener("mouseenter", (e) => {
+        if (e.target.matches(".dot, .portfolio-btn")) {
+            stopSlide()
         }
     }, true)
 
 
-    sliderBlock.addEventListener("mouseleave", (e) => {                                                 //события на мышь
-        if (e.target.matches(".dot, .portfolio-btn")) {                                                                  //
-            startSlide(timerInterval)                                                                                     //
+
+
+
+    sliderBlock.addEventListener("mouseleave", (e) => {
+        if (e.target.matches(".dot, .portfolio-btn")) {
+            startSlide(timerInterval)
         }
     }, true)
+
+
     // ограничитель
     addDots()
     startSlide(timerInterval);
@@ -110,3 +120,71 @@ const slider = () => {
 
 
 export default slider
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for (let i = 0; i < slides.length; i++) {
+//     //dots[i].classList.remove("dot")
+//     let newDot = document.createElement("li")
+//     newDot.classList.add("dot")
+//     if (i === 0) {
+//         newDot.classList.add("dot-active")
+//     }
+//     portfolioDots.append(newDot)
+//     dots = document.querySelectorAll(".dot")
+//     //dots[i].classList.remove("dot")
+// }

@@ -11,8 +11,7 @@ const menu = () => {
         let target = e.target;
         if (target.closest(".menu") || target.closest(".close-btn") || target.closest("li a")) {
             toggleMenu()
-        }
-        else if (!target.closest("menu") && menu.classList.contains("active-menu")) {
+        } else if (!target.closest("menu") && menu.classList.contains("active-menu")) {
             menu.classList.toggle('active-menu')
         }
     })

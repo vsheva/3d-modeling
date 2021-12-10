@@ -26,7 +26,7 @@ const calc = (price = 100) => {
         } else if (calcDay.value && calcDay.value < 10) {
             calcDayValue = 1.5
         }
-        // основное
+
         if (calcType.value && calcSquare.value) {
             totalValue = price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue
         } else {
