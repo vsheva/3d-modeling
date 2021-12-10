@@ -1,4 +1,4 @@
-'use strict'
+import {blockBody, unBlockBody} from './helpers'
 
 const sendForm = (formId) => {
     const form = document.getElementById(formId);
@@ -37,23 +37,12 @@ const sendForm = (formId) => {
         const formElements = form.querySelectorAll("input")
 
 
-        //
         const removeMessage = () => {
             setTimeout(() => status.remove(), 2000);
         };
-        //
-
 
         status.textContent = loadText
         form.append(status)
-
-
-        // прелоадер:
-        status.innerHTML = `<div class="sk-double-bounce">
-        <div class="sk-child sk-double-bounce-1"></div>
-        <div class="sk-child sk-double-bounce-2"></div>
-      </div>`;
-
 
         formData.forEach((val, key) => {
             formBody[key] = val
@@ -74,6 +63,7 @@ const sendForm = (formId) => {
                         document.querySelector(".popup").style.display = "none";
                     }, 3000);
 
+                    unBlockBody()
                     removeMessage();
 
                     //
@@ -83,13 +73,48 @@ const sendForm = (formId) => {
                     removeMessage();
                 })
         }
-
-
     })
 
 }
 
 export default sendForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

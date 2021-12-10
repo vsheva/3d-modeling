@@ -68,7 +68,6 @@ const formValidation = () => {
     }
     validFormPhone()
 
-
 }
 
 export default formValidation;

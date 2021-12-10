@@ -5,18 +5,17 @@ const tabs = () => {
 
 
     tabPanel.addEventListener("click", (e) => {
-        //console.log(e.target.closest(".service-header-tab"));
 
         if (e.target.closest(".service-header-tab")) {
-            const tabBtn = e.target.closest(".service-header-tab")                             // создаем переменную
+            const tabBtn = e.target.closest(".service-header-tab")
 
             tabs.forEach((element, index) => {
-                if (element === tabBtn) {                                                      // навешиваем активный класс
+                if (element === tabBtn) {
                     element.classList.add("active")
-                    tabContent[index].classList.remove("d-none")                         // появляется нужный контент
+                    tabContent[index].classList.remove("d-none")
                 } else {
                     element.classList.remove("active")
-                    tabContent[index].classList.add("d-none")                                    //  !!!
+                    tabContent[index].classList.add("d-none")
 
                 }
             });

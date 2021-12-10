@@ -10,7 +10,6 @@ import sendForm from './modules/sendForm';
 import formValidation from './modules/formValidation';
 
 
-
 timer("01 January 2022");
 menu();
 modal();

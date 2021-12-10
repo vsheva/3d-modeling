@@ -1,5 +1,5 @@
 'use strict'
-import {animate} from './helpers'
+import {animate, blockBody, unBlockBody} from './helpers'
 
 
 const modal = () => {
@@ -28,19 +28,15 @@ const modal = () => {
                 showPopup()
             }
             popup.style.display = 'block'
-            document.body.style.overflow = "hidden"
-            document.body.style.height = "100%"
+            blockBody()
         })
     });
-
 
 
     popup.addEventListener('click', (e) => {
         if (!e.target.closest('.popup-content') || e.target.classList.contains("popup-close")) {
             popup.style.display = 'none'
-            document.body.style.overflow = 'auto';
-            document.body.style.height = "auto";
-
+            unBlockBody()
         }
     })
 }
@@ -48,6 +44,118 @@ const modal = () => {
 modal()
 
 export default modal;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

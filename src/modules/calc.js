@@ -34,38 +34,7 @@ const calc = (price = 100) => {
         }
         total.textContent = `${totalValue} ₽`
 
-        //let countId,
-
-        // if (calcType.value && calcSquare.value) {
-        //
-        //     totalValue = price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue
-
-            //Запуск анимации
-            // let step = 100;
-            // let time = 2000
-            // let t = Math.round(time / (totalValue / step));
-            // let n = 0;
-            //
-            // let interval = setInterval(() => {
-            //     n = n + step;
-            //     if (n == totalValue) {
-            //         clearInterval(interval);
-            //     }
-            //     total.innerHTML = totalValue;
-            //
-            // }, t);
-
-
-            // $({numberValue: total}).animate({numberValue: totalValue}, {
-            //     duration: 1000,
-            //     easing: 'linear',
-            //     step: function() {
-            //         $('#total').text(Math.ceil(this.numberValue));
-            //     }
-           //= });
-        }
-
-
+    }
 
 
     calcBlock.addEventListener("change", (e) => {
@@ -90,3 +59,132 @@ export default calc;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//let countId,
+
+// if (calcType.value && calcSquare.value) {
+//
+//     totalValue = price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue
+
+//Запуск анимации
+// let step = 100;
+// let time = 2000
+// let t = Math.round(time / (totalValue / step));
+// let n = 0;
+//
+// let interval = setInterval(() => {
+//     n = n + step;
+//     if (n == totalValue) {
+//         clearInterval(interval);
+//     }
+//     total.innerHTML = totalValue;
+//
+// }, t);
+
+
+// $({numberValue: total}).animate({numberValue: totalValue}, {
+//     duration: 1000,
+//     easing: 'linear',
+//     step: function() {
+//         $('#total').text(Math.ceil(this.numberValue));
+//     }
+//= });

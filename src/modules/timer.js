@@ -6,20 +6,16 @@ const timer = (deadline) => {
     const timerMinutes = document.getElementById("timer-minutes");
     const timerSeconds = document.getElementById("timer-seconds");
 
-
-
     const getTimeRemaining = () => {
         let dateStop = new Date(deadline).getTime()
         let dateNow = new Date().getTime()
         let timeRemaining = (dateStop - dateNow) / 1000
-        let hours = Math.floor(timeRemaining / 60 / 60)    //вычленим количество дней
+        let hours = Math.floor(timeRemaining / 60 / 60)
         let minutes = Math.floor((timeRemaining / 60) % 60)
         let seconds = Math.floor(timeRemaining % 60);
 
         return {timeRemaining, hours, minutes, seconds }
-
     }
-
 
     let getZero = function (num) {
         if (num >=0 && num <10) {
@@ -44,9 +40,6 @@ const timer = (deadline) => {
             timerSeconds.textContent = "00";
         }
 
-        // if (getTime.timeRemaining < 0) {
-        //     setTimeout(updateClock,1000)
-        // }
     }
     updateClock()
     let intervalId = setInterval(updateClock, 1000)
@@ -58,3 +51,82 @@ const timer = (deadline) => {
 export default timer;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if (getTime.timeRemaining < 0) {
+//     setTimeout(updateClock,1000)
+// }
