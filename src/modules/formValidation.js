@@ -1,11 +1,15 @@
 const formValidation = () => {
 
-
     let validFormText = () => {
-        //const formText = document.querySelector(".mess")
         const formText = document.querySelector("input[name='user_message']")
         formText.addEventListener("input", (e) => {
-            e.target.value = e.target.value.replace(/[^а-я\d\s\,\.\!\-\:\;\"\?]/gi, '');
+            let text = e.target
+            text.value = text.value.replace(/[^а-я\d\s\,\.\!\-\:\;\"\?]/gi, '');
+            if (text.value.length < 2) {
+                text.setCustomValidity("Введите минимум 2 буквы в поле");
+            } else {
+                text.setCustomValidity("");
+            }
         })
     }
     validFormText();
@@ -15,7 +19,14 @@ const formValidation = () => {
         let formName = document.querySelectorAll("input[name='user_name']")
         formName.forEach(element => {
             element.addEventListener("input", (e) => {
-                e.target.value = e.target.value.replace(/[^а-я\s]/gi, '');
+                let name = e.target
+                name.value = name.value.replace(/[^а-я\s]/gi, '');
+
+                if (name.value.length < 2) {
+                    name.setCustomValidity("Введите минимум 2 буквы");
+                } else {
+                    name.setCustomValidity("");
+                }
             })
         })
     }
@@ -26,8 +37,16 @@ const formValidation = () => {
         let formEmail = document.querySelectorAll('.form-email');
         formEmail.forEach(element => {
             element.addEventListener("input", (e) => {
-                e.target.value = e.target.value.replace(/[^a-z\@\_\.\!\~\*\'\-]/gi, '');
+                let email = e.target
+                email.value = email.value.replace(/[^a-z\@\_\.\!\~\*\'\-]/gi, '');
+
+                if (email.value.length < 3) {
+                    email.setCustomValidity("Введите минимум 3 символа в поле email");
+                } else {
+                    email.setCustomValidity("");
+                }
             })
+
         })
     }
     validFormEmail()
@@ -37,7 +56,13 @@ const formValidation = () => {
         let formPhone = document.querySelectorAll('input[name="user_phone"]')
         formPhone.forEach(element => {
             element.addEventListener("input", (e) => {
-                e.target.value = e.target.value.replace(/[^\d\(\)\+\-]/gi, '');
+                let phone = e.target
+                phone.value = phone.value.replace(/[^\d\(\)\+\-]/gi, '');
+                if (phone.value.length < 5) {
+                    phone.setCustomValidity("Введите не менее 5 цифр номера");
+                } else {
+                    phone.setCustomValidity("");
+                }
             })
         })
     }
@@ -47,3 +72,4 @@ const formValidation = () => {
 }
 
 export default formValidation;
+
