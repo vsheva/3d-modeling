@@ -3,7 +3,13 @@ import {unBlockBody} from './helpers'
 const sendForm = (formId) => {
     const form = document.getElementById(formId);
     const errorText = 'Что-то пошло не так...';
-    const loadText = 'Загрузка...';
+    //const loadText = 'Загрузка...'
+    //spinner
+    let img = document.createElement("img");
+    img.src ="images/form/spinner.svg";
+
+
+
     const successText = 'Спасибо! Мы скоро с Вами свяжемся!';
     const status = document.createElement('div');
 
@@ -41,7 +47,10 @@ const sendForm = (formId) => {
             setTimeout(() => status.remove(), 2000);
         };
 
-        status.textContent = loadText
+
+
+
+        status.innerHTML = `<img src="images/form/spinner.svg" alt="">`
         form.append(status)
 
         formData.forEach((val, key) => {
