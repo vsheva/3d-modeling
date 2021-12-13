@@ -11,9 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34995cb4-48b6-45d3-8451-ddc7931abf10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/spinner.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/sendForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/sendForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +102,7 @@
       <workItem from="1638879267951" duration="41441000" />
       <workItem from="1639012497496" duration="3520000" />
       <workItem from="1639155756626" duration="8127000" />
-      <workItem from="1639167120064" duration="16532000" />
+      <workItem from="1639167120064" duration="16823000" />
     </task>
     <servers />
   </component>

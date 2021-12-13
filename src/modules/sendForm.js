@@ -3,16 +3,12 @@ import {unBlockBody} from './helpers'
 const sendForm = (formId) => {
     const form = document.getElementById(formId);
     const errorText = 'Что-то пошло не так...';
-    //const loadText = 'Загрузка...'
-    //spinner
+    //const loadText = 'Загрузка...'  //spinner
     let img = document.createElement("img");
-    img.src ="images/form/spinner.svg";
-
-
+    img.src = "images/form/spinner.svg";
 
     const successText = 'Спасибо! Мы скоро с Вами свяжемся!';
     const status = document.createElement('div');
-
 
     status.style.cssText = "font-size: 2rem; color: #fff";
 
@@ -46,8 +42,6 @@ const sendForm = (formId) => {
         const removeMessage = () => {
             setTimeout(() => status.remove(), 2000);
         };
-
-
 
 
         status.innerHTML = `<img src="images/form/spinner.svg" alt="">`
@@ -87,6 +81,103 @@ const sendForm = (formId) => {
 }
 
 export default sendForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
